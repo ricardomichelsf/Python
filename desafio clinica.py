@@ -17,6 +17,9 @@ class Medico(Pessoa):
 
     def set_salario(self, valor):
         self.__salario = valor
+        
+    def especialistas(self, especialista):
+        self.especialidade = especialista
 
 
 class Paciente(Pessoa):
