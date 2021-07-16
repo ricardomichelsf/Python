@@ -1,5 +1,5 @@
 import csv
-
+"""
 with open("brasil_covid.csv", 'r', encoding='utf-8') as arquivo_csv:
     leitor = csv.reader(arquivo_csv)
     heard = next(leitor)
@@ -7,3 +7,15 @@ with open("brasil_covid.csv", 'r', encoding='utf-8') as arquivo_csv:
         if float(linha[2]) > 1:
             print(linha)
 
+with open('brasil_covid.csv', 'r', encoding='utf-8') as csv_file:
+    linhas  = csv_file.read()
+    linhas = linhas.split('\n')
+    for linha in linhas:
+        linha = linha.split(',')
+        print(linha)"""
+
+
+with open('brasil_covid.csv', 'r', encoding='utf-8') as arquivo_users:
+    escritor = csv.writer(arquivo_users)
+    escritor.writerow('nome', 'sobrenome', 'email', 'genero')
+    escritor.writerow('Pietro ', 'Ribeiro', 'ricardo@gmal.comm', 'Masculino')
