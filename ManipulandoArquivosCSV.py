@@ -15,7 +15,8 @@ with open('brasil_covid.csv', 'r', encoding='utf-8') as csv_file:
         print(linha)"""
 
 
-with open('brasil_covid.csv', 'r', encoding='utf-8') as arquivo_users:
+with open('brasil_covid.csv', 'r', encoding='utf-8', newline='') as arquivo_users:
     escritor = csv.writer(arquivo_users)
-    escritor.writerow('nome', 'sobrenome', 'email', 'genero')
-    escritor.writerow('Pietro ', 'Ribeiro', 'ricardo@gmal.comm', 'Masculino')
+    escritor.writerow(['nome', 'sobrenome', 'email', 'genero'])
+    escritor.writerow(['Pietro ', 'Ribeiro', 'ricardo@gmal.comm', 'Masculino'])
+
