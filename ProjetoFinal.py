@@ -72,7 +72,7 @@ def set_title(title=''):
 
 def create_chart(x, y, labels, kind='bar', title=''):
 
-    data = get_datasets(y, labels)
+    datasets = get_datasets(y, labels)
     options = set_title(title)
 
     chart = {
@@ -89,7 +89,7 @@ def create_chart(x, y, labels, kind='bar', title=''):
 
 def get_api_chart(chart):
     url_base = 'https://quickchart.io/chart'
-    resp = r.get(f'(url_base)?c={str(chart)}')
+    resp = r.get(f'{url_base}?c={str(chart)}')
     return resp.content
 
 def save_image(path, content):
@@ -102,11 +102,11 @@ def display_image(path):
 
 y_data_1 = []
 for obs in final_data[1::10]:
-    y_data_1.append(obs["CONFIRMADOS"])
+    y_data_1.append(obs[CONFIRMADOS])
 
 y_data_2 = []
 for obs in final_data[1::10]:
-    y_data_2.append(obs['RECUPERADOS'])
+    y_data_2.append(obs[RECUPERADOS])
 
 labels = ['Confirmados', "Recuperadis"]
 
@@ -117,16 +117,16 @@ for obs in final_data[1::10]:
 chart = create_chart(x,[y_data_1, y_data_2], labels, title="Gráfico confirmados vs recuperados")
 chart_content = get_api_chart(chart)
 save_image('meu-primeiro-grafico.png', chart_content)
-display_image('meu-primeiro-grafdico.png')
+display_image('meu-primeiro-grafico.png')
 
 def get_api_qrcode(link):
     text = quote(link) # parsing do link para url
     url_base = 'https:///quickchart.io/qr'
-    resp = r.get(f'(url_base)?text=(text)')
+    resp = r.get(f'{url_base}?text={text}')
     return resp.content
 
 url_base = 'https://quickchart.io/chart'
-link = f'(url_base)?c={str(chart)}'
+link = f'{url_base}?c={str(chart)}'
 save_image('qr-code.png', get_api_qrcode(link))
 display_image('qr-code.png')
 
