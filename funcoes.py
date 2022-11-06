@@ -24,4 +24,4 @@ valores = [6, 3, 9, 1, 0, 2]
 dobra(valores)
 print(valores) 
 =======
->>>>>>> bc129dae3cc43f42c55c2c6f1193ca0ac77fb68e
+
