@@ -1,4 +1,4 @@
-"""arquivo = open("dom_casmurro.txt", 'r', encoding='utf-8')
+arquivo = open("dom_casmurro.txt", 'r', encoding='utf-8')
 texto = arquivo.read()
 print(texto)
 arquivo.close()
@@ -24,7 +24,7 @@ with open('arquivo_teste.txt', 'w', encoding='utf-8') as arquivo:
     arquivo.write('Essa é a segunda linha que eu escrevi usando Python\n')
 
 with open('arquivo_teste.txt', 'r', encoding='utf-8') as arquivo:
-    print(arquivo.read(), end='')"""
+    print(arquivo.read(), end='')
 
 with open('arquivo_teste.txt', 'a', encoding='utf-8') as arquivo:
     arquivo.write('Essa é terceira linha que eu escrevi usando Python\n')
