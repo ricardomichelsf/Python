@@ -1,5 +1,5 @@
 import csv
-"""
+
 with open("brasil_covid.csv", 'r', encoding='utf-8') as arquivo_csv:
     leitor = csv.reader(arquivo_csv)
     heard = next(leitor)
@@ -12,7 +12,7 @@ with open('brasil_covid.csv', 'r', encoding='utf-8') as csv_file:
     linhas = linhas.split('\n')
     for linha in linhas:
         linha = linha.split(',')
-        print(linha)"""
+        print(linha)
 
 
 with open('arquivo_users.csv', 'w', encoding='utf-8', newline='') as arquivo_users:
