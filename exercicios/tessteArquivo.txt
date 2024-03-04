@@ -1,1 +1,0 @@
-Testando a escrita de um arquivo

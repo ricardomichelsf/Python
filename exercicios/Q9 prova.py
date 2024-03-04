@@ -1,4 +1,3 @@
-# Ricardo Michel Silva Ferreira
 def contar(item, seq):
     i = 0
     cont = 0
